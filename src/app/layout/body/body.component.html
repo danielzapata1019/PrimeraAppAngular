@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+            </div>
+            <input type="text" name="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario"
+                [placeholder]="'Nombre Usuario'" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <label>Tu usuario es: {{nombreUsuario}}</label>
+    </div>
+</div>
+<div class="container" *ngIf="nombreUsuario == 'dzapatas'">
+    <div class="row">
+        <div class="col-4 tarea-container">
+            <app-tarea [usuario]="nombreUsuario"
+            (enviarUsuarioEvent)= "respuestaTarea($event)">
+            </app-tarea>
+        </div>
+        <div class="col-8 lista-container">
+            <app-lista-tareas></app-lista-tareas>
+        </div>
+    </div>
+</div>
