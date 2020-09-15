@@ -1,10 +1,12 @@
-<div class="row pl-3 pr-3" *ngFor="let item of items">
-    <div class="card col-4">
-        <img src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png"
-            class="card-img-top" alt="...">
-        <h2>{{item.nombre}}</h2>
-        <div class="card-body">
-            <p class="card-text">{{item.descripcion}}</p>
+<div class="row">
+    <div class="col-md-4" *ngFor="let item of cervecerias">
+        <div class="card">
+            <img src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png"
+                class="card-img-top" alt="...">
+            <h2>{{item.name}}</h2>
+            <div class="card-body">
+                <p class="card-text">{{item.website_url}}</p>
+            </div>
         </div>
     </div>
 </div>
